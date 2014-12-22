@@ -16,9 +16,9 @@ func DefaultHandler(w http.ResponseWriter, r *http.Request, b *s3n.ResponseBuffe
 	if id := s.Get("id"); id != nil {
 		userdata, err := s3nCusers.GetUserData(id.(int))
 		if err == nil {
-			data["loggedin"]=true
-			data["firstname"]=userdata["firstname"]
-			data["loggedin"]=userdata["secondname"]
+			data["LoggedIn"]=true
+			data["FirstName"]=userdata["FirstName"]
+			data["SecondName"]=userdata["SecondName"]
 		}
 	}/* else {
 		s3n.Redirect(w, r, s, "/login", 302)
@@ -40,9 +40,9 @@ func GameHandler(w http.ResponseWriter, r *http.Request, b *s3n.ResponseBuffer, 
 	if id := s.Get("id"); id != nil {
 		userdata, err := s3nCusers.GetUserData(id.(int))
 		if err == nil {
-			data["loggedin"]=true
-			data["firstname"]=userdata["firstname"]
-			data["loggedin"]=userdata["secondname"]
+			data["LoggedIn"]=true
+			data["FirstName"]=userdata["FirstName"]
+			data["SecondName"]=userdata["SecondName"]
 		} else {
 			s3n.Redirect(w, r, s, "/", 302)
 			return
