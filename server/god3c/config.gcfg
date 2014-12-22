@@ -1,0 +1,14 @@
+
+; s3n configuration file
+
+[database]
+usemysql = true
+autoconnect = true
+host = 127.0.0.1:3306
+user = root
+password =
+dbname = s3ndb
+
+[cookies]
+path = /
+maxage = 604800 # 7 days * 24 hours * 60 minutes * 60 seconds
