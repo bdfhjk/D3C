@@ -252,7 +252,9 @@
             return scored;
         }, 500);
     };
+
     run();
+	
 })();
 
 document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
